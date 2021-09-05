@@ -1,32 +1,48 @@
+//MAIN PASSWORD COMPONENTS
+   
+    //Upper Case 
+    upletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" , "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    //Lower Case
+
+    //Character 
+
+    //Number
 
 
-function generatePassword(passwordLength) {
-    var upperCh ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var lowerCh = "abcdefghijkflmnopqrstuvwxyz";
-    var numberch = "123456789";
-    
-    var allChars = numberch + lowerCh + upperCh;
-    var randPasswordArry = Array(passwordLength);
-    randPasswordArry[0] = numberch;
-    randPasswordArry[1] = upperCh;
-    randPasswordArry[2] = lowerCh;
-    randPasswordArry = randPasswordArry.fill(allChars, 7)
-    return shuffleArray(randPasswordArry.map(function(x) { return x[Math.floor(Math.random() * x.length)] })).join('');
-}
 
-// SHUFFLE
+//INPUT VARIABLES
+var enter;
+var confirmNumber;
+var confirmCharacter;
+var confirmUppercase;
+var confirmLowercase;
+//END INPUT VARIABLES
 
-function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-}
 
-  password(generatePassword (22));
+//GENERATING PASSWORD
+
+  function generatePassword() {
+
+  }
+
+
+
+
+
+
+
+
+// Assignment code here
+function writePassword() {
+
+    var password = generatePassword();
+  var passwordText = document.querySelector("#password");}
+
+
+
+
+
+
 
 
 // Get references to the #generate element
