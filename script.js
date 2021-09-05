@@ -1,13 +1,13 @@
 //MAIN PASSWORD COMPONENTS
    
     //Upper Case 
-    upletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" , "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    upletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" , "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     //Lower Case
-
+    lowerletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" , "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     //Character 
-
+    character = ["?", "%", "!", "@", "#", "$", "&", "*",];
     //Number
-
+    number = ["1", "2", "3", "4", "5", "6", "7", "8", "9",];
 
 
 //INPUT VARIABLES
