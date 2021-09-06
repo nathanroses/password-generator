@@ -10,7 +10,7 @@
     number = ["1", "2", "3", "4", "5", "6", "7", "8", "9",];
 
 
-    var choices;
+
 //INPUT VARIABLES
 var enter;
 var confirmNumber;
@@ -19,6 +19,7 @@ var confirmUppercase;
 var confirmLowercase;
 //END INPUT VARIABLES
 
+var choices;
 
 //GENERATING PASSWORD
 
@@ -27,7 +28,7 @@ var confirmLowercase;
       enter = parseInt(prompt("Please Choose Between 8 to 128 random characters to be in your password."));
       //PROMPT if NO input VALUE
       if (!enter) {
-          alert("VALUE IS MISSING!");
+          alert("INPUT IS MISSING");
       } else if (enter < 8 || enter > 128) {
        enter = parseInt(prompt("Your MUST choose between 8 and 128"));
      
@@ -45,16 +46,49 @@ var confirmLowercase;
           choices = alert("Please choose from one of the options!");
       }
 
-      //
+      
+      //THE RESULT OF THE 1 to 4 OPTIONS CHOOSE
+
+            //4 POSTIVES
+            else if(confirmCharacter && confirmLowercase && confirmUppercase && confirmNumber) {
+                  choices = character.concat(upletter, lowerletter, number, character);
+             }
         
+            //3 POSTIVES
+            else if(confirmCharacter && confirmNumber && confirmLowercase) {
+                choices = character.concat(number, lowerletter);
+            } 
+            else if(confirmCharacter && confirmNumber && confirmUppercase) {
+                choices = character.concat(number, upletter);
+            }
+            else if(confirmNumber && confirmLowercase && confirmUppercase) {
+                choices = number.concat(upletter, lowerletter);
+            }
+            else if(confirmCharacter && confirmUppercase && confirmLowercase) {
+                choices = character.concat(upletter, lowerletter);
+            }
+            //2 POSTIVES
+            
  
-    }
+    };
+
+
+
+
+
+     //PASSWORD IN PLACE HOLDER
+       var password = [];
 
 
 
 
 
 
+
+
+       function UserInput(ps) {
+           document.getElementById("password").textContent = ps;
+       }
 
 
 
