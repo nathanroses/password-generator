@@ -37,11 +37,18 @@ var confirmLowercase;
         confirmLowercase = confirm("Will this contain Lowercase Letters?");
         confirmCharacter = confirm("Will this contain Special Characters?");
          confirmNumber = confirm("Will this contain number?");
-    }
- 
- 
- 
     };
+    
+
+      // MUST CHOOSE FROM 4 OPTIONS
+      if (!confirmCharacter && !confirmLowercase && !confirmUppercase && !confirmNumber){
+          choices = alert("Please choose from one of the options!");
+      }
+
+      //
+        
+ 
+    }
 
 
 
