@@ -21,6 +21,13 @@ var confirmLowercase;
 
 var choices;
 
+var get = document.querySelector("#generate");
+
+get.addEventListener("click", function() {
+    ps = generatePassword();
+    document.getElementById("password").placeholder = ps;
+});
+ 
 //GENERATING PASSWORD
 
   function generatePassword() {
@@ -68,42 +75,62 @@ var choices;
                 choices = character.concat(upletter, lowerletter);
             }
             //2 POSTIVES
-            
- 
+            else if (confirmCharacter && confirmNumber) {
+                choices = character.concat(number);
+            }
+            else if (confirmCharacter && confirmLowercase) {
+                choices = character.concat(lowerletter);
+            }
+            else if (confirmCharacter && confirmUppercase) {
+                choices = character.concat(upletter);
+            }
+            else if (confirmNumber && confirmUppercase) {
+                choices = number.concat(upletter);
+            }
+            else if (confirmLowercase && confirmUppercase) {
+                choices = alpha.concat(upletter);
+            }
+            else if (confirmLowercase && confirmNumber) {
+                choices = alpha.concat(number);
+            }
+           //1 POSTIVE
+           else if (confirmCharacter) {
+               choices = character;
+           }
+           else if (confirmLowercase) {
+               choices = lowerletter;
+           }
+           else if (confirmNumber) {
+               choices = number;
+           }
     };
-
 
 
 
 
      //PASSWORD IN PLACE HOLDER
        var password = [];
+     
+
+    //GENERATE THE RANDOM SELECTOR
+    for (var i = 0; i < enter; i++) {
+        var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+        password.push(pickChoices);
+    }
+   
+    function UserInput(ps) {
+        document.getElementById("password").textContent = ps;
+    }
 
 
-
-
-
-
-
-
-       function UserInput(ps) {
-           document.getElementById("password").textContent = ps;
-       }
+    //COPY
+    var copy = document.querySelector("#copy");
+    copy.addEventListener("click", function() {
+        copyPassword();
+    });
 
 
 
 //OTHER
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
