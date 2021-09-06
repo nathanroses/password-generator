@@ -10,6 +10,7 @@
     number = ["1", "2", "3", "4", "5", "6", "7", "8", "9",];
 
 
+    var choices;
 //INPUT VARIABLES
 var enter;
 var confirmNumber;
@@ -22,8 +23,25 @@ var confirmLowercase;
 //GENERATING PASSWORD
 
   function generatePassword() {
-
-  }
+      //PROMPT to ASK for 8 - 128  
+      enter = parseInt(prompt("Please Choose Between 8 to 128 random characters to be in your password."));
+      //PROMPT if NO input VALUE
+      if (!enter) {
+          alert("VALUE IS MISSING!");
+      } else if (enter < 8 || enter > 128) {
+       enter = parseInt(prompt("Your MUST choose between 8 and 128"));
+     
+    
+    } else {
+        confirmUppercase =
+        confirmLowercase =
+        confirmCharacter =
+        confirmNumber =
+    }
+ 
+ 
+ 
+    }
 
 
 
