@@ -33,15 +33,15 @@ var confirmLowercase;
      
     
     } else {
-        confirmUppercase =
-        confirmLowercase =
-        confirmCharacter =
-        confirmNumber =
+        confirmUppercase = confirm("Will this contain Uppercase Letters?");
+        confirmLowercase = confirm("Will this contain Lowercase Letters?");
+        confirmCharacter = confirm("Will this contain Special Characters?");
+         confirmNumber = confirm("Will this contain number?");
     }
  
  
  
-    }
+    };
 
 
 
@@ -50,28 +50,19 @@ var confirmLowercase;
 
 
 
-// Assignment code here
-function writePassword() {
 
-    var password = generatePassword();
-  var passwordText = document.querySelector("#password");}
-
-
-
-
-
-
-
-
+//OTHER
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-
-
 // Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
   passwordText.value = password;
 
-
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
