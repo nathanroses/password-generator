@@ -1,5 +1,16 @@
 //MAIN PASSWORD COMPONENTS
    
+var generateBtn = document.querySelector("#generate");
+
+//INPUT VARIABLES
+var enter;
+var confirmNumber;
+var confirmCharacter;
+var confirmUppercase;
+var confirmLowercase;
+//END INPUT VARIABLES
+
+
     //Upper Case 
     upletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" , "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     //Lower Case
@@ -11,23 +22,10 @@
 
 
 
-//INPUT VARIABLES
-var enter;
-var confirmNumber;
-var confirmCharacter;
-var confirmUppercase;
-var confirmLowercase;
-//END INPUT VARIABLES
+
 
 var choices;
 
-var get = document.querySelector("#generate");
-
-get.addEventListener("click", function() {
-    ps = generatePassword();
-    document.getElementById("password").placeholder = ps;
-});
- 
 //GENERATING PASSWORD
 
   function generatePassword() {
@@ -117,20 +115,18 @@ get.addEventListener("click", function() {
         var pickChoices = choices[Math.floor(Math.random() * choices.length)];
         password.push(pickChoices);
     }
-   
-    function UserInput(ps) {
-        document.getElementById("password").textContent = ps;
-    }
 
-
-    //COPY
-    var copy = document.querySelector("#copy");
-    copy.addEventListener("click", function() {
-        copyPassword();
-    });
-
-
-
-//OTHER
+// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+   //END
+   generateBtn.addEventListener("click", writePassword);
 
