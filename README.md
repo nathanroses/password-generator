@@ -19,7 +19,7 @@ https://nathanroses.github.io/password-generator/
 ![ebb0910355d8abe9dc862167dfdf5352](https://user-images.githubusercontent.com/87315662/132160954-54057310-9614-41cf-8405-773fa081b2e1.png)
 
 
-## Created
-      by nathan rose
-
-### password-genrator,2021
+## Creator
+   Nathan Rose
+    
+### 2021 password-generator
